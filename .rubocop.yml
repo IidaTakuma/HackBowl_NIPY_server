@@ -1,0 +1,18 @@
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - vendor/bundle/**/*
+    - node_modules/**/*
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 120 
