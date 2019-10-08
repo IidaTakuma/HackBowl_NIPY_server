@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
+* HackBowl-201910のチーム「なんでやねん、いやそれペリカンやろ！！」のサーバーサイド開発のリポジトリです。
 
-Things you may want to cover:
 
-* Ruby version
+## Version
+* ruby-version `ruby 2.6.3`
+* rbenv `rbenv 1.1.2`
+* Rails `Rails 6.0.0`
+* node `v12.10.0`
+* yarn `1.17.3`
+* postgresql `psql (PostgreSQL) 11.5`
+* Bundlr `Bundler version 2.0.2`
+* Docker `Docker version 19.03.2`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Setup
+```
+$ git clone https://github.com/IidaTakuma/HackBowl_NIPY_server.git
+$ cd [app_directory]
+$ bundle install
+$ docker-compose build
+$ docker-compose up -d
+$ bin/rails db:create
+$ bin/rails db:migrate
+$ bin/rails server
+```
