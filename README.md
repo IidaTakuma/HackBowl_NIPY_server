@@ -19,6 +19,7 @@
 $ git clone https://github.com/IidaTakuma/HackBowl_NIPY_server.git
 $ cd [app_directory]
 $ bundle install
+$ yarn install --check-files
 $ docker-compose build
 $ docker-compose up -d
 $ bin/rails db:create
