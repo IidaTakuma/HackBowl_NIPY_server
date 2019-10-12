@@ -29,3 +29,4 @@ $ bin/rails server
 
 ## development
 * 画像は ` app/assets/images ` の中に格納
+* スタイルは ` app/javascript/stylesheets `に記載
