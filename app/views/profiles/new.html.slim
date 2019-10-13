@@ -1,0 +1,16 @@
+h1 Profiles#new
+
+= form_with model: @profile, local: true do |form|
+  .form-class
+    = form.label :name
+    = form.text_field :name, class: 'form-control'
+  .form-class
+    = form.label :nickname
+    = form.text_field :nickname, class: 'form-control'
+  .form-class
+    = form.label 'アイコン'
+    = form.file_field :icon
+  .form-class
+    = form.label :skills
+    = form.text_area :skills, class: 'form-control'
+  = form.submit '作成'
