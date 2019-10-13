@@ -1,5 +1,12 @@
 h1 Homes#index
-p Find me in app/views/homes/index.html.slim
 button.btn.btn-lg.btn-warning
   | ボタン
 = image_tag('mimikkyu.jpg')
+
+p 
+  | jQuery稼働テスト
+
+javascript:
+  $(document).ready(function() {
+    $("p").text("jQuery稼働テスト(稼働中)");
+  });

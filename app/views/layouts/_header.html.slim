@@ -1,4 +1,9 @@
 header
-  nav.navbar.navbar-light style='background-color:#e37222;'
-    /= link_to "sample app", root_path, style: 'color:#fff;'
-    = link_to "Team NiSP", root_path, class: 'navbar-brand', style: 'color:#fff !important;'
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    = link_to 'Team NiSP', root_path, class: 'navbar-brand'
+    button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"]
+      span.navbar-toggler-icon
+    #navbarNavAltMarkup.collapse.navbar-collapse.show
+      .navbar-nav
+        = link_to 'Home', root_path, class: "nav-item nav-link active"
+        = link_to '名刺一覧', root_path, class: "nav-item nav-link active"
