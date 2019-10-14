@@ -15,7 +15,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_profile
-    flash.now[:error] = 'サービス開始前にプロフィールを登録してください'
     redirect_to new_profile_path if current_user.profile.nil?
   end
 end
