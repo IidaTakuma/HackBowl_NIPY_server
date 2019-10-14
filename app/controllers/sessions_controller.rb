@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :require_login, only: %i[new create]
+  skip_before_action :require_profile, only: %i[new create destroy]
   def new; end
 
   def create
@@ -7,7 +9,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to current_user
     else
-      flash.new[:denger] = 'メールアドレスまたはパスワードが間違っています'
+      flash.now[:denger] = 'メールアドレスまたはパスワードが間違っています'
       render 'new'
     end
   end

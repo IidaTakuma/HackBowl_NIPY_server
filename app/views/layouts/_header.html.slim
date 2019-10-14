@@ -8,7 +8,8 @@ header
         - if logged_in?
           = link_to 'ホーム', root_path, class: "nav-item nav-link active"
           = link_to '名刺一覧', root_path, class: "nav-item nav-link active"
-          = link_to 'マイページ', root_path, class: "nav-item nav-link active"
+          / -unless current_user.profile.nil?
+          /   = link_to 'マイページ', profile_path(current_users_profile.id), class: "nav-item nav-link active"
           = link_to 'ログアウト', logout_path, method: :delete, class: "nav-item nav-link active"
         - else
           = link_to 'ログイン', login_path, class: "nav-item nav-link active"
