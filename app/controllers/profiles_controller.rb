@@ -25,6 +25,7 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:name, :nickname, :icon, :skills)
+    params.require(:profile).permit(:name, :nickname, :icon, :affiliation1, :affiliation2,
+                                    :githubID, :QiitaID, :otherURL, :skills)
   end
 end

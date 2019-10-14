@@ -11,6 +11,21 @@ h1 Profiles#new
     = form.label 'アイコン'
     = form.file_field :icon
   .form-class
+    = form.label :affiliation1
+    = form.text_field :affiliation1, class: 'form-control'
+  .form-class
+    = form.label :affiliation2
+    = form.text_field :affiliation2, class: 'form-control'
+  .form-class
+    = form.label :githubID
+    = form.text_field :githubID, class: 'form-control'
+  .form-class
+    = form.label :QiitaID
+    = form.text_field :QiitaID, class: 'form-control'
+  .form-class
+    = form.label :otherURL
+    = form.text_field :nickname, class: 'form-control'
+  .form-class
     = form.label :skills
     = form.text_area :skills, class: 'form-control'
   = form.submit '作成'
