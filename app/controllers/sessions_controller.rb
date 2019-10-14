@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :require_login, only: %i[new create]
+  skip_before_action :require_profile, only: %i[new create destroy]
   def new; end
 
   def create

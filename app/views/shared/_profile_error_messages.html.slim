@@ -1,0 +1,9 @@
+- if @profile.errors.any?
+  #id_explanation
+    .alart.alart-danger
+      The form contains#{pluralize(@profile.errors.count, 'error')}.
+
+    ul
+      - @profile.errors.full_messages.each do |msg|
+        li
+          = msg
