@@ -14,14 +14,23 @@ class ProfilesController < ApplicationController
       flash[:success] = 'プロフィールを保存しました'
       redirect_to @profile
     else
-      flash.now[:denger] = '何かが間違っています'
       render 'new'
     end
   end
 
-  def edit; end
+  def edit
+    @profile = Profile.find(params[:id])
+  end
 
-  def update; end
+  def update
+    @profile = Profile.new(profile_params.merge(user: current_user))
+    if @profile.save
+      flash[:success] = 'プロフィールの変更を保存しました'
+      redirect_to @profile
+    else
+      render 'edit'
+    end
+  end
 
   private
 

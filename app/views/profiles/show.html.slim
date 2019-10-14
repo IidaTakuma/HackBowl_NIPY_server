@@ -27,3 +27,6 @@ p
 
 - if @profile.icon.attached?
   = image_tag @profile.icon, class: 'user-icon'
+  br
+
+= link_to 'プロフィールを編集する', edit_profile_path(@profile)
