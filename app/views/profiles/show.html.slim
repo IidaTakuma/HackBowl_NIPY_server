@@ -1,4 +1,11 @@
 
-= @profile.name
+p
+  = @profile.name
+p
+  = @profile.nickname
+p
+  = @profile.skills
+
+
 - if @profile.icon.attached?
-  = image_tag @profile.icon
+  = image_tag @profile.icon, class: 'user-icon'
