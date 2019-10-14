@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :require_login, only: %i[new create]
+  skip_before_action :require_profile, only: %i[new create]
   def new
     @user = User.new
   end
@@ -7,7 +9,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = 'サインアップに成功しました'
-      redirect_to @user
+      log_in @user
+      redirect_to new_profile_path
     else
       render 'new'
     end
