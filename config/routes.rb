@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'api_sessions/login'
   root 'homes#index'
   resources :users, only: %i[new create index show edit update]
   resources :profiles, only: %i[new create show edit update]

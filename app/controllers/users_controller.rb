@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.new_token
     if @user.save
       flash[:success] = 'サインアップに成功しました'
       log_in @user
