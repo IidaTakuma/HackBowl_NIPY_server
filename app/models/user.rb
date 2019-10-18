@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_secure_token
+
   has_one :profile
   before_save { self.email = email.downcase }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
@@ -7,4 +9,8 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: true }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
+
+  def new_token
+    SecureRandom.urlsafe_base64
+  end
 end
