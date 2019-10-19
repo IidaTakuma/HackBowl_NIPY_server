@@ -1,7 +1,7 @@
-class FriendshipsController < ApplicationController
-  skip_before_action :require_login, only: %i[create]
-  skip_before_action :require_profile, only: %i[create]
+class FriendshipsController < ApplicationApiController
+  skip_before_action :require_token, only: %i[]
   protect_from_forgery
+
   def create
     friendship = Friendship.new(friendship_params)
     if friendship.save
