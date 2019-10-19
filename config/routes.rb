@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'friendships/new'
   root 'homes#index'
-  resources :users, only: %i[new create index show edit update] do
+  resources :users, only: %i[new create index edit update] do
     post 'friendships/create'
   end
   resources :profiles, only: %i[new create show edit update]
