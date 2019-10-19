@@ -16,6 +16,7 @@ require("channels")
 import '../stylesheets/application'
 import '../stylesheets/header'
 import '../stylesheets/login'
+import '../stylesheets/profil'
 
 window.onload = (function(){
   $('.menu-trigger').on('click',function(){

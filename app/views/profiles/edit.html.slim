@@ -1,35 +1,36 @@
-.edit-container
-  h1
-  | プロフィール編集画面
+.edit-container　
+  h1 プロフィール編集画面
+  p.needs　*は必須項目です。
 
-= form_with model: @profile, local: true do |form|
-  = render 'shared/profile_error_messages'
-  .form-class
-    = form.label '名前(必須)'
-    = form.text_field :name, class: 'form-control'
-  .form-class
-    = form.label 'ニックネーム(必須)'
-    = form.text_field :nickname, class: 'form-control'
-  .form-class
-    = form.label 'アイコン(必須)'
-    br
-    = form.file_field :icon
-  .form-class
-    = form.label '所属1(必須)'
-    = form.text_field :affiliation1, class: 'form-control'
-  .form-class
-    = form.label '所属2(任意)'
-    = form.text_field :affiliation2, class: 'form-control'
-  .form-class
-    = form.label 'Github ID(必須)'
-    = form.text_field :githubID, class: 'form-control'
-  .form-class
-    = form.label 'Qiita ID(任意)'
-    = form.text_field :QiitaID, class: 'form-control'
-  .form-class
-    = form.label 'その他 URL(任意)'
-    = form.text_field :otherURL, class: 'form-control'
-  .form-class
-    = form.label 'スキル(コンマ区切りで入力)(必須)'
-    = form.text_area :skills, class: 'form-control'
-  = form.submit '作成'
+  .edit-form
+    = form_with model: @profile, local: true do |form|
+      = render 'shared/profile_error_messages'
+      .form-class
+        = form.label '名前*'
+        = form.text_field :name, class: 'form-control'
+      .form-class
+        = form.label 'ニックネーム*'
+        = form.text_field :nickname, class: 'form-control'
+      .form-class
+        = form.label 'アイコン*'
+        br
+        = form.file_field :icon
+      .form-class
+        = form.label '所属1*'
+        = form.text_field :affiliation1, class: 'form-control'
+      .form-class
+        = form.label '所属2(任意)'
+        = form.text_field :affiliation2, class: 'form-control'
+      .form-class
+        = form.label 'Github ID*'
+        = form.text_field :githubID, class: 'form-control'
+      .form-class
+        = form.label 'Qiita ID(任意)'
+        = form.text_field :QiitaID, class: 'form-control'
+      .form-class
+        = form.label 'その他 URL(任意)'
+        = form.text_field :otherURL, class: 'form-control'
+      .form-class
+        = form.label 'スキル(コンマ区切りで入力)*'
+        = form.text_field :skills, class: 'form-control'
+      = form.submit '作成'
