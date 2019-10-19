@@ -7,12 +7,19 @@
     span
   nav
     ul
-      li
-        | Menu
-      li
-        | Menu
-      li
-        | Menu
+      - if logged_in?
+        li
+          = link_to 'ホーム', root_path
+        li
+          = link_to '名刺一覧', users_path
+        - unless current_user.profile.nil?
+          li
+            = link_to 'マイページ', profile_path(current_users_profile.id)
+        li
+          = link_to 'ログアウト', logout_path, method: :delete
+      - else
+        = link_to 'ログイン', login_path
+        = link_to '新規登録', new_user_path
 .overlay
 .sen
   / nav.navbar.navbar-expand-lg.navbar-light.bg-light
