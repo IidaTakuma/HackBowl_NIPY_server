@@ -19,4 +19,12 @@ class User < ApplicationRecord
   def new_token
     SecureRandom.urlsafe_base64
   end
+
+  def friends
+    followings = Friendship.where(following_id: id)
+    followings_list = followings.map { |f| Profile.find_by(user_id: f.follower_id).name }
+    followers = Friendship.where(follower_id: id)
+    followers_list = followers.map { |f| Profile.find_by(user_id: f.following_id).name }
+    followings_list + followers_list
+  end
 end
