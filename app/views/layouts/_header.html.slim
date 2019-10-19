@@ -1,16 +1,32 @@
 header
-  nav.navbar.navbar-expand-lg.navbar-light.bg-light
-    = link_to 'Team NiSP', root_path, class: 'navbar-brand'
-    button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"]
-      span.navbar-toggler-icon
-    #navbarNavAltMarkup.collapse.navbar-collapse.show
-      .navbar-nav
-        - if logged_in?
-          = link_to 'ホーム', root_path, class: "nav-item nav-link active"
-          = link_to '名刺一覧', root_path, class: "nav-item nav-link active"
-          / -unless current_user.profile.nil?
-          /   = link_to 'マイページ', profile_path(current_users_profile.id), class: "nav-item nav-link active"
-          = link_to 'ログアウト', logout_path, method: :delete, class: "nav-item nav-link active"
-        - else
-          = link_to 'ログイン', login_path, class: "nav-item nav-link active"
-          = link_to '新規登録', new_user_path, class: "nav-item nav-link active"
+  p.service_name
+    | ペリカード
+  .menu-trigger
+    span
+    span
+    span
+  nav
+    ul
+      li
+        | Menu
+      li
+        | Menu
+      li
+        | Menu
+  .overlay
+  .sen
+  / nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  /   = link_to 'Team NiSP', root_path, class: 'navbar-brand'
+  /   button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"]
+  /     span.navbar-toggler-icon
+  /   #navbarNavAltMarkup.collapse.navbar-collapse.show
+  /     .navbar-nav
+  /       - if logged_in?
+  /         = link_to 'ホーム', root_path, class: "nav-item nav-link active"
+  /         = link_to '名刺一覧', root_path, class: "nav-item nav-link active"
+  /         / -unless current_user.profile.nil?
+  /         /   = link_to 'マイページ', profile_path(current_users_profile.id), class: "nav-item nav-link active"
+  /         = link_to 'ログアウト', logout_path, method: :delete, class: "nav-item nav-link active"
+  /       - else
+  /         = link_to 'ログイン', login_path, class: "nav-item nav-link active"
+  /         = link_to '新規登録', new_user_path, class: "nav-item nav-link active"
