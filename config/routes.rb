@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'friendships/new'
   root 'homes#index'
-  resources :users, only: %i[new create index show edit update]
+  resources :users, only: %i[new create index show edit update] do
+    post 'friendships/create'
+  end
   resources :profiles, only: %i[new create show edit update]
   resources :follows, only: %i[new create]
   get '/login', to: 'sessions#new'
@@ -9,5 +11,4 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   # Use for API
   post 'api_sessions/login'
-  post 'friendships/create'
 end
