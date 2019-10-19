@@ -31,13 +31,18 @@ form{
     font-weight: bold;
 }
 
-.form-class{
+.form-class, .form-group{
     border-bottom: 2px solid #adadad;
     position: relative;
     margin: 30px 0;
 }
 
-.form-class input{
+.form-control{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+}
+
+.form-class input, .form-group input[type="text"], .form-group input[type="password"]{
     font-size: 15px;
     color: #333;
     border: none;
@@ -78,7 +83,7 @@ form{
     width: 100%;
 }*/
 
-.btn{
+.btn, .form-control1{
     font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 
                'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: 15px;
