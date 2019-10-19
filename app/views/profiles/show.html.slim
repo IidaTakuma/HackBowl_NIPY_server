@@ -22,7 +22,8 @@ p
   = @profile.otherURL
 p
   | スキル：
-  = @profile.skills
+  - @skills.each do |skill|
+    = skill
 
 
 - if @profile.icon.attached?
