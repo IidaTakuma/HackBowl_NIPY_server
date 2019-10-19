@@ -22,9 +22,9 @@ class User < ApplicationRecord
 
   def friends
     followings = Friendship.where(following_id: id)
-    followings_list = followings.map { |f| Profile.find_by(user_id: f.follower_id).name }
+    followings_list = followings.map { |f| Profile.find_by(user_id: f.follower_id) }
     followers = Friendship.where(follower_id: id)
-    followers_list = followers.map { |f| Profile.find_by(user_id: f.following_id).name }
+    followers_list = followers.map { |f| Profile.find_by(user_id: f.following_id) }
     followings_list + followers_list
   end
 end
