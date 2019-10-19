@@ -15,7 +15,7 @@ class ApiSessionsController < ApplicationApiController
                        'affiliation2': profile.affiliation2,
                        'Github': profile.githubID,
                        'Qiita': profile.QiitaID,
-                       'otherURL': profile.otherURL }
+                       'otherURL': profile.otherURL }, status: 200
       else
         render json: { 'status': 'ERROR',
                        'message': 'profile not found' }
