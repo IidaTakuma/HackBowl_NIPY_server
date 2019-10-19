@@ -1,4 +1,5 @@
 class ApiSessionsController < ApplicationApiController
+  skip_before_action :require_token, only: %i[login]
   protect_from_forgery
   def login
     user = User.find_by(email: params[:email].downcase)
