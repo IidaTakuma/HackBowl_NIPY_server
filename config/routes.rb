@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   # Use for API
   get 'api_sessions/login'
+  get 'api_sessions/show'
   post 'friendships/create'
 end
