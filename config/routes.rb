@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   # Use for API
-  get 'api_sessions/login'
-  get 'api_sessions/show'
+  post 'api_sessions/login'
   post 'friendships/create'
 end
