@@ -3,7 +3,9 @@ class FriendshipsController < ApplicationApiController
   protect_from_forgery
 
   def create
-    friendship = Friendship.new(friendship_params)
+    follower = User.find_by(id: params[:user_id])
+    following = User.find_by(token: params[:token])
+    friendship = Friendship.new(follower_id: follower.id, following_id: following.id)
     if friendship.save
       render json: { 'status': 'SUCCESS', 'message': 'create friendship succeeded' }
     else
