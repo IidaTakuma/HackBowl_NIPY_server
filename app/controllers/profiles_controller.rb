@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   skip_before_action :require_profile, only: %i[new create]
   def show
     @profile = Profile.find(params[:id])
+    @skills = @profile.skills.split(',')
   end
 
   def new
