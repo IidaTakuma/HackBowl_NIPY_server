@@ -15,6 +15,7 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 import '../stylesheets/application'
 import '../stylesheets/header'
+import '../stylesheets/login'
 
 window.onload = (function(){
   $('.menu-trigger').on('click',function(){

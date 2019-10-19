@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700&display=swap&subset=latin-ext');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+form{
+    display: block;
+}
+.container{
+    width: 360px;
+    background: #f1f1f1;
+    height: 560px;
+    padding: 40px 40px 0 40px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+}
+
+.container h1{
+    color: black;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: bold;
+}
+
+.form-class{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 30px 0;
+}
+
+.form-class input{
+    font-size: 15px;
+    color: #333;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 5px;
+    height: 40px;
+}
+
+/*.txtb span::before{
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: .5s;
+}
+
+.txtb span::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0.1px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(120deg,#4c6cb3,#4c6cb3);
+    transition: .5s;
+}
+
+.focus + span::before{
+    top: -5px;
+}
+
+.focus + span::after{
+    width: 100%;
+}*/
+
+.btn{
+    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 
+               'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #adadad;
+    background-size: 200%;
+    color: black;
+    outline: none;
+    cursor: pointer;
+}
+a{
+    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 
+               'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-size: 13px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    left: 42%;
+    top: 73%;
+}
+footer.bottom-text{
+    color: rgb(224, 220, 220);
+    position: absolute;
+    left: 50%;
+    top: 111%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 13px;
+}
