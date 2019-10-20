@@ -4,14 +4,15 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'montserrat', sans-serif;
+    font-family: 'montserrat', sans-serif, 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 
+    'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     box-sizing: border-box;
 }
 
 form{
     display: block;
 }
-.container{
+.container-login, .container-signup{
     width: 360px;
     background: #f1f1f1;
     height: 560px;
@@ -23,7 +24,7 @@ form{
     transform: translate(-50%, -50%);
 }
 
-.container h1{
+.container-login h1, .container-signup h1{
     color: black;
     font-style: italic;
     text-align: center;
@@ -53,39 +54,7 @@ form{
     height: 40px;
 }
 
-/*.txtb span::before{
-    content: attr(data-placeholder);
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    color: #adadad;
-    transform: translateY(-50%);
-    z-index: -1;
-    transition: .5s;
-}
-
-.txtb span::after{
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0.1px;
-    width: 0%;
-    height: 2px;
-    background: linear-gradient(120deg,#4c6cb3,#4c6cb3);
-    transition: .5s;
-}
-
-.focus + span::before{
-    top: -5px;
-}
-
-.focus + span::after{
-    width: 100%;
-}*/
-
 .btn, .form-control1{
-    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 
-               'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: 15px;
     display: block;
     width: 100%;
@@ -101,8 +70,6 @@ a.l2{
     color: white;
 }
 a.l1{
-    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 
-               'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: 13px;
     display: inline-block;
     text-align: center;
@@ -114,8 +81,8 @@ footer.bottom-text{
     color: rgb(224, 220, 220);
     position: absolute;
     left: 50%;
-    top: 111%;
-    transform: translate(-50%, -50%);
+    top: 780px;
+    transform: translate(-50%, 0%);
     text-align: center;
     font-size: 13px;
 }

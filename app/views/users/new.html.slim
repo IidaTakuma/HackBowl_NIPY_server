@@ -1,13 +1,14 @@
-h1 SignUp
+.container-signup
+  h1 SignUp
 
-= form_with model: @user, local: true do |form|
-  = render 'shared/user_error_messages'
-  .form-group
-    = form.label :email
-    = form.text_field :email, class:'form-control'
+  = form_with model: @user, local: true do |form|
+    = render 'shared/user_error_messages'
+    .form-group
+      = form.label :email
+      = form.text_field :email, class:'form-control'
 
-  .form-group
-    = form.label :password
-    = form.password_field :password, class:'form-control'
+    .form-group
+      = form.label :password
+      = form.password_field :password, class:'form-control'
 
-  = form.submit '登録', class: 'btn btn-primary'
+    = form.submit '登録', class: 'btn btn-primary'

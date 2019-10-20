@@ -1,19 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700&display=swap&subset=latin-ext');
+*{
+    font-family: 'montserrat', sans-serif, 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 
+    'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
 .edit-container{
     overflow-y: scroll;
     width: 600px;
     background: #f1f1f1;
     height: 600px;
     padding: 40px;
-    margin: 5%;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.edit-container h1, .container-profil h1{
+    height: 40px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container-profil{
+    overflow-y: scroll;
+    width: 700px;
+    background: #f1f1f1;
+    height: 400px;
+    padding: 40px;
     border-radius: 10px;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
     display: block;
 }
 
-.edit-container h1{
+.container-profil h1{
     height: 40px;
     color: black;
     text-align: center;
@@ -25,9 +50,8 @@
     height: 984px;
     margin: 0 auto;
 }
+
 .edit-form input[type="submit"]{
-    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 
-               'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: 15px;
     display: block;
     width: 30%;
@@ -41,10 +65,72 @@
     cursor: pointer;
 }
 
-
 p.needs{
     font-size: 15px;
     font-style: italic;
     text-align: right;
     position: relative;
+}
+
+.user-icon{
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    left: 40px;
+    top: 35px;
+}
+
+p.name{
+    width: 200px;
+    font-weight: bold;
+    font-size: 40px;
+    position: absolute;
+    text-align: left;
+    left: 330px;
+    top: 55px;
+    border-bottom: medium solid #4c6cb3;
+}
+
+p.nickname{
+    width: 220px;
+    font-size: 20px;
+    position: absolute;
+    text-align: left;
+    left: 480px;
+    top: 85px;
+    border-bottom: medium solid #4c6cb3;
+}
+
+ul.prf_group{
+    width: 400px;
+    list-style-type: none;
+    line-height: 2;
+    text-align: left;
+    font-size:30px;
+    position: absolute;
+    left: 330px;
+    top: 195px;
+}
+
+ul.IDs{
+    list-style-type: none;
+    line-height: 2;
+    position: absolute;
+    top: 265px;
+    left: 50px;
+}
+
+p.skills{
+    font-size: 30px;
+    position: absolute;
+    left: 330px;
+    top: 150px;
+}
+
+a.profedit{
+    position: absolute;
+    text-align: right;
+    left: 500px;
+    top: 360px;
 }
