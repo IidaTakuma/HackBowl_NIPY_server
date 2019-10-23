@@ -23,8 +23,7 @@
   p.skills
     - @skills.each do |skill|
       = skill
-
-
+  
   - if @profile.icon.attached?
     = image_tag @profile.icon, class: 'user-icon'
     br
